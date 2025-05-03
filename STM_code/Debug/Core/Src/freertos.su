@@ -1,0 +1,7 @@
+../Core/Src/freertos.c:136:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:201:6:StartDefaultTask	16	static
+../Core/Src/freertos.c:221:6:servo_control	24	static
+../Core/Src/freertos.c:249:6:handle_transmit	24	static
+../Core/Src/freertos.c:285:6:handle_USB_data	16	static
+../Core/Src/freertos.c:307:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/freertos.c:317:6:HAL_SPI_TxRxCpltCallback	16	static
