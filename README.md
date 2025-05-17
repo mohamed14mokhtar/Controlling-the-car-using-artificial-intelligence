@@ -3,7 +3,18 @@
 A smart car control system built using STM32, Arduino, ESP32, and AI. The car can be remotely controlled through a mobile app or intelligently stopped using a traffic sign detection AI model. The system also supports FOTA (Firmware Over-the-Air) updates via MQTT and Firebase.
 
 ---
+## 📑 Table of Contents
+1. [System Overview](#system-overview)
+2. [Control Methods](#control-methods)
+3. [FOTA (Firmware Over-The-Air)](#fota-firmware-over-the-air)
+4. [Software Architecture](#software-architecture)
+5. [Technologies & Tools Used](#technologies--tools-used)
+6. [Software Tools](#software-tools)
+7. [Features](#features)
+8. [Future Enhancements](#future-enhancements)
+9. [Team Members](#team-members)
 
+---
 ## 🔧 System Overview
 
 ### 🧠 Main Controller: STM32F401RCT6
@@ -37,6 +48,9 @@ A smart car control system built using STM32, Arduino, ESP32, and AI. The car ca
 - Mobile app publishes MQTT messages to a **local broker**.
 - ESP32 subscribes to the topic and forwards data via **SPI** to STM32.
 - STM32 sends commands to the car via Bluetooth.
+- <p align="center">
+  <img src="https://github.com/user-attachments/assets/a40b5028-f00f-4b67-bb2b-8d2f9a78251d" width="60%" />
+</p>
 
 ### 2. **Autonomous Stop (via AI Model)**
 - AI model (runs on PC) detects **traffic light color**.
@@ -60,6 +74,9 @@ Implemented on **STM32F401** with a custom **bootloader**:
   - ✅ Mass Erase
   - ✅ Flash Download from Firebase
   - ✅ Jump to Application/Bootloader
+  - - <p align="center">
+  <img src="https://github.com/user-attachments/assets/bbcdc9dc-1cb7-4a7b-b847-e64f47bec031" width="60%" />
+</p>
 
 ---
 
@@ -109,17 +126,6 @@ Implemented on **STM32F401** with a custom **bootloader**:
 
 ---
 
-## 📸 Screenshots and Diagrams
-
-
-
-- 📱 Mobile App Dashboard  
-- 🌐 Node-RED Web Panel  
-- 📊 System Architecture Diagram  
-- 📷 AI Model Detection Output  
-
----
-
 ## 🚀 Future Enhancements
 
 - Deploy AI model to an onboard system (e.g. Raspberry Pi)
@@ -141,5 +147,3 @@ Implemented on **STM32F401** with a custom **bootloader**:
 | Verena Ashraf     | alaa.ahmed.abbass@gmail.com |
 
 ---
-
-## 📄 License
