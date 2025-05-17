@@ -1,1 +1,140 @@
-# Controlling-the-car-using-artificial-intelligence
+# 🚗 Control the Car Using Artificial Intelligence
+
+A smart car control system built using STM32, Arduino, ESP32, and AI. The car can be remotely controlled through a mobile app or intelligently stopped using a traffic sign detection AI model. The system also supports FOTA (Firmware Over-the-Air) updates via MQTT and Firebase.
+
+---
+
+## 🔧 System Overview
+
+### 🧠 Main Controller: STM32F401RCT6
+- Central brain of the system.
+- Communicates with:
+  - **ESP32** via **SPI** (receives app commands via MQTT).
+  - **Arduino Uno** via **Bluetooth (HC-05)**.
+  - **ESP8266** via **UART** (for FOTA updates).
+  - **PC-based AI model** via **USB (UART-over-USB)**.
+
+### 🚗 Car Unit
+- **Arduino Uno** + **Motor Driver**
+- 4x **DC Motors** for movement
+- **Ultrasonic Sensor** for obstacle detection
+- **HC-05 Bluetooth Module** receives commands from STM32
+
+> 🔁 Bluetooth Communication:
+> - 1x HC-05 connected to STM32  
+> - 1x HC-05 connected to Arduino Uno (car)
+
+---
+
+## 📱 Control Methods
+
+### 1. **Manual Mode (via Mobile App)**
+- Mobile app publishes MQTT messages to a **local broker**.
+- ESP32 subscribes to the topic and forwards data via **SPI** to STM32.
+- STM32 sends commands to the car via Bluetooth.
+
+### 2. **Autonomous Stop (via AI Model)**
+- AI model (runs on PC) detects **traffic light color**.
+- Communicates with STM32 via **USB**.
+- If RED is detected:
+  - STM32 halts the car via Bluetooth.
+- If NOT red:
+  - STM32 continues relaying control signals from the mobile app.
+
+---
+
+## 🔁 FOTA (Firmware Over-The-Air)
+
+Implemented on **STM32F401** with a custom **bootloader**:
+
+- New firmware uploaded using:
+  - Web App → MQTT → ESP8266 → STM32 (UART)
+- Firmware files stored on **Firebase**
+- STM32 bootloader supports:
+  - ✅ Sector Erase
+  - ✅ Mass Erase
+  - ✅ Flash Download from Firebase
+  - ✅ Jump to Application/Bootloader
+
+---
+
+## ⚙️ Software Architecture
+
+- **STM32** runs on **FreeRTOS**:
+  - Tasks, queues, semaphores for real-time operations.
+- **ESP32/ESP8266** written in **Arduino IDE**
+- **Mobile App** uses MQTT to communicate with ESP32
+- **Local MQTT Broker** built using **Mosquitto**
+- **Node-RED** used for visual server control and OTA triggers
+
+---
+
+## 🧰 Technologies & Tools Used
+
+| Category           | Tools/Hardware                                              |
+|--------------------|-------------------------------------------------------------|
+| Microcontrollers   | STM32F401RCT6, Arduino Uno                                  |
+| Communication      | ESP32, ESP8266, 2x HC-05 Bluetooth Modules                  |
+| Sensors & Motors   | 4 DC Motors, Motor Driver, Ultrasonic Sensor                |
+| AI Model           | PC-based model (Traffic Light Detection) via USB            |
+| OTA Tools          | Firebase, Node-RED, MQTT                                    |
+| Protocols          | SPI, UART, USB (UART-over-USB), MQTT                        |
+| Mobile App         | MQTT-based mobile app, connected to local broker            |
+| Broker             | Local MQTT Broker using Mosquitto                           |
+
+### 👨‍💻 Development Tools
+- **STM32CubeIDE**
+- **STM32CubeMX**
+- **Keil MDK**
+- **Arduino IDE**
+- **Visual Studio Code**
+- **Node-RED**
+- **MQTTX**
+- **Mosquitto MQTT Broker**
+
+---
+
+## 🔐 Features
+
+- Real-time car control via mobile app  
+- Local MQTT server for secure communication  
+- AI-powered red light detection and emergency stop  
+- Wireless bug fixes via FOTA  
+- Real-time task management using FreeRTOS  
+
+---
+
+## 📸 Screenshots and Diagrams
+
+(*Upload and reference images in `/images` folder*)
+
+- 📱 Mobile App Dashboard  
+- 🌐 Node-RED Web Panel  
+- 📊 System Architecture Diagram  
+- 📷 AI Model Detection Output  
+
+---
+
+## 🚀 Future Enhancements
+
+- Deploy AI model to an onboard system (e.g. Raspberry Pi)
+- Add live video streaming in app
+- GPS integration for location tracking
+- Advanced traffic sign recognition (stop, yield, turn)
+
+---
+
+## 👥 Team Members
+
+| Name              | Email                       |
+|-------------------|-----------------------------|
+| Mohamed Mokhtar   | mohamedmokhrat1@gmail.com   |
+| Mohamed Haney     | hemdanmohamedhany@gmail.com |  
+| Mohamed Galal     | mohamed.gallall12@gmail.com |       
+| Omar Waled        | mohamed.gallall12@gmail.com |       
+| Alaa Ahmed        | o2003wo@gmail.com           |
+| Verena Ashraf     | alaa.ahmed.abbass@gmail.com |
+
+---
+
+## 📄 License
