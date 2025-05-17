@@ -1,4 +1,4 @@
-# 🚗 Control the Car Using Artificial Intelligence
+![Screenshot 2025-05-18 011125](https://github.com/user-attachments/assets/d2337d34-63ec-40dd-9d18-3168a1b48780)# 🚗 Control the Car Using Artificial Intelligence
 
 A smart car control system built using STM32, Arduino, ESP32, and AI. The car can be remotely controlled through a mobile app or intelligently stopped using a traffic sign detection AI model. The system also supports FOTA (Firmware Over-the-Air) updates via MQTT and Firebase.
 
@@ -13,6 +13,15 @@ A smart car control system built using STM32, Arduino, ESP32, and AI. The car ca
   - **Arduino Uno** via **Bluetooth (HC-05)**.
   - **ESP8266** via **UART** (for FOTA updates).
   - **PC-based AI model** via **USB (UART-over-USB)**.
+ 
+  - ![Screenshot 2025-05-18 011050](https://github.com/user-attachments/assets/0b0172f3-c7bc-4a31-b131-0acf431061b5)
+  - ![Screenshot 2025-05-18 011125](https://github.com/user-attachments/assets/7aba6b28-6d8b-4bf1-ab34-adf24c880c92)
+
+  - <p align="center">
+  <img src="(https://github.com/user-attachments/assets/0b0172f3-c7bc-4a31-b131-0acf431061b5)" alt="Project Overview 1" width="45%" style="margin-right: 10px;" />
+  <img src="(https://github.com/user-attachments/assets/7aba6b28-6d8b-4bf1-ab34-adf24c880c92)" alt="Project Overview 2" width="45%" />
+   </p>
+
 
 ### 🚗 Car Unit
 - **Arduino Uno** + **Motor Driver**
@@ -106,7 +115,7 @@ Implemented on **STM32F401** with a custom **bootloader**:
 
 ## 📸 Screenshots and Diagrams
 
-(*Upload and reference images in `/images` folder*)
+
 
 - 📱 Mobile App Dashboard  
 - 🌐 Node-RED Web Panel  
