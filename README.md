@@ -140,7 +140,7 @@ Implemented on **STM32F401** with a custom **bootloader**:
 | Name              | Email                       |
 |-------------------|-----------------------------|
 | Mohamed Mokhtar   | mohamedmokhrat1@gmail.com   |
-| Mohamed Haney     | hemdanmohamedhany@gmail.com |  
+| Mohamed Hany      | hemdanmohamedhany@gmail.com |  
 | Mohamed Galal     | mohamed.gallall12@gmail.com |       
 | Omar Waled        | o2003wo@gmail.com           |       
 | Alaa Ahmed        | alaa.ahmed.abbass@gmail.com |
