@@ -49,7 +49,7 @@ A smart car control system built using STM32, Arduino, ESP32, and AI. The car ca
 - ESP32 subscribes to the topic and forwards data via **SPI** to STM32.
 - STM32 sends commands to the car via Bluetooth.
 - <p align="center">
-  <img src="https://github.com/user-attachments/assets/a40b5028-f00f-4b67-bb2b-8d2f9a78251d" width="60%" hight="50%" />
+  <img src="https://github.com/user-attachments/assets/a40b5028-f00f-4b67-bb2b-8d2f9a78251d" width="60%" hight="30%" />
 </p>
 
 ### 2. **Autonomous Stop (via AI Model)**
@@ -142,8 +142,8 @@ Implemented on **STM32F401** with a custom **bootloader**:
 | Mohamed Mokhtar   | mohamedmokhrat1@gmail.com   |
 | Mohamed Haney     | hemdanmohamedhany@gmail.com |  
 | Mohamed Galal     | mohamed.gallall12@gmail.com |       
-| Omar Waled        | mohamed.gallall12@gmail.com |       
-| Alaa Ahmed        | o2003wo@gmail.com           |
-| Verena Ashraf     | alaa.ahmed.abbass@gmail.com |
+| Omar Waled        | o2003wo@gmail.com           |       
+| Alaa Ahmed        | alaa.ahmed.abbass@gmail.com |
+| Verena Ashraf     | verenaashraf62@gmail.com    |
 
 ---
